@@ -1,5 +1,6 @@
 package com.example.rodneytressler.week4assessment;
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,14 @@ import butterknife.ButterKnife;
 public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerViewholder> {
 
     private List<Player> playerList;
+//    @BindView(R.id.text_player_name)
+//    private TextView playerNameView;
+//    @BindView(R.id.text_player_number)
+//    protected TextView playerNumberVoew;
+//    @BindView(R.id.text_player_team)
+//    protected TextView playerTeamView;
+
+
 
     public PlayerAdapter(List<Player> playerList) {
         this.playerList = playerList;
@@ -56,6 +65,9 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
         }
 
         public void bindPlayer(Player player) {
+            playerName.setText(playerList.get(0).toString());
+            playerNumber.setText(playerList.get(1).toString());
+            playerTeam.setText(playerList.get(2).toString());
 
         }
     }
